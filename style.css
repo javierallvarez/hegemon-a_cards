@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap');
+
+:root{
+    --gray-bck: rgb(221, 220, 220);
+    --gradient-gray: linear-gradient(147deg, rgba(233,233,233,1) 0%, rgba(216,232,230,1) 66%, rgba(233,208,241,1) 100%);;
+    --special-blue: rgb(72, 224, 209);
+    --darker-blue: rgb(31, 151, 139);
+    --pinky: rgb(235, 48, 110);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+}
+
+body{
+    background: var(--gradient-gray);
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    
+    min-height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.character{
+    max-width: 45rem;
+    border-radius: 10px;
+    margin: 1rem;
+    background: var(--special-blue);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 14px 25px -6px rgba(0,0,0,0.5);
+}
+
+.character-image{
+    border-radius: 10px 10px 0 0 ;
+    height: 50vh;
+    background: var(--pinky);
+    overflow: hidden;
+}
+
+.character-image img{
+    border-radius: 10px 10px 0 0 ;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: 70%;
+    object-position: center;
+}
+
+.character-header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--pinky);
+    margin: 2rem 2rem ;
+    
+}
+
+.character-name {
+    line-height: 1;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-style: italic;
+    
+}
+
+.character-type{
+    background-color: var(--pinky);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 300;
+    
+}
+
+.character-bio {
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    font-weight: 300;
+    margin: 2rem 2rem;
+    min-height: 11rem;
+  }
+
+
+.character-footer{
+    background: #0c0c0c;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    padding: 0em;    
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+
+    .character{
+        width: 100vw;
+    }
+    .character-name{
+        font-size: 1.6rem;
+    }
+}
